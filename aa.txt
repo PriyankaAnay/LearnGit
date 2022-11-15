@@ -1,0 +1,17 @@
+System.setProperties("webdriver.chrome.driver","Path of the exe fiel");
+
+WebDriver driver = new ChromeDriver();
+
+driver.get("url of website");
+
+driver.findelement(by.xpath("(//input[@aria-autocomplete="list"])[1]")).sendkeys("Pune");
+
+driver.findelement(by.xpath("(//input[@aria-autocomplete="list"])[2]")).sendkeys("Delhi");
+
+driver.findelement(by.xpath("//button[@class="search_btn train_Search"]")).click();
+
+
+
+
+List<WebElement> TotalNoOfTrains =driver.findelements(by.xpath("//button[@class="search_btn train_Search"]")).size();
+
